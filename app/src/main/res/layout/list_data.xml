@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:clickable="true"
+    android:padding="2dp"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="0dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/empty_profile"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/iv_image"
+            android:layout_toRightOf="@+id/iv_image"
+            android:text="Gaji"
+            android:textColor="#363636"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_category"
+            android:layout_alignStart="@+id/tv_category"
+            android:layout_below="@+id/tv_category"
+            android:layout_marginTop="4dp"
+            android:text="Ini adalah deskrpsi gaji"
+            android:textSize="12dp"
+            android:maxLines="1"
+            android:maxLength="50"/>
+
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Rp. 3000.000"
+            android:textColor="@color/colorAccentLightGreen"
+            android:textSize="14dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="72dp"
+            android:background="@color/shadow"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

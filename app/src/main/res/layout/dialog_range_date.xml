@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_button_date1"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/borderimage"
+            android:src="@drawable/date" />
+
+        <TextView
+            android:id="@+id/tv_date1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/iv_button_date1"
+            android:layout_toRightOf="@+id/iv_button_date1"
+            android:text="Sen , 25 - Jun - 2018"
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/iv_button_date2"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tv_date1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/borderimage"
+            android:src="@drawable/date" />
+
+        <TextView
+            android:id="@+id/tv_date2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/iv_button_date2"
+            android:layout_toRightOf="@+id/iv_button_date2"
+            android:text="Sen , 25 - Jun - 2018"
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+</LinearLayout>

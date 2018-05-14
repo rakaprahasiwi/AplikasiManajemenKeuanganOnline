@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Laporan Keuangan</string>
+
+    <string name="npm">NPM</string>
+    <string name="name">Nama</string>
+    <string name="register">Daftar</string>
+    <string name="view">Lihat Data</string>
+    <string name="error">Kesalahan Jaringan</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="email">Email Id</string>
+    <string name="passowrd">Kata sandi</string>
+    <string name="login">LOGIN</string>
+    <string name="show_pwd">Tampil Katasandi</string>
+    <string name="hide_pwd">Sembunyikan Katasandi</string>
+    <string name="forgot">Lupa Katasandi?</string>
+    <string name="closebutton">Close Button for Activity</string>
+    <string name="newUser">Daftar Member Disini</string>
+    <string name="fullName">Nama Lengkap</string>
+    <string name="mobileNumber">Nomor HP</string>
+    <string name="location">Lokasi</string>
+    <string name="confirmPassword">Konfirmasi Katasandi</string>
+    <string name="terms_conditions">Setuju untuk lanjutkan.</string>
+    <string name="signUp">DAFTAR</string>
+    <string name="already_user">Sudah punya akun? Masuk disini.</string>
+    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="back">KEMBALI</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
