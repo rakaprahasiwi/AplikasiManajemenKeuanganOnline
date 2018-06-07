@@ -13,16 +13,27 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import net.prahasiwi.laporankeuangan.adapter.FragPagerAdapter;
 import net.prahasiwi.laporankeuangan.R;
+import net.prahasiwi.laporankeuangan.api.RegisterAPI;
+import net.prahasiwi.laporankeuangan.api.ServiceGenerator;
 import net.prahasiwi.laporankeuangan.helper.DbHelper;
+import net.prahasiwi.laporankeuangan.model.Value;
+import net.prahasiwi.laporankeuangan.model.ValueCategory;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton fab;
     DbHelper dbHelper;
     ViewPager viewPager;
+    String urldatabase,email,m;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,4 +114,51 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+//    public void defaultCategory(){
+//        ServiceGenerator serviceGenerator = new ServiceGenerator();
+//        RegisterAPI api = serviceGenerator.getClient(urldatabase).create(RegisterAPI.class);
+//        Call<Value> call = api.add_income(email, "Gaji");
+//        Call<Value> call2 = api.add_outcome(email, "Makanan");
+//        call.enqueue(new Callback<Value>() {
+//            @Override
+//            public void onResponse(Call<Value> call, Response<Value> response) {
+//                //progress.dismiss();
+//                String message = response.body().getMessage();
+//                if (response.body().getValue().equals("1")) {
+//                    Toast.makeText(MainActivity.this, ""+message, Toast.LENGTH_SHORT).show();
+//                    //loadDataCategory();
+//                } else {
+//                    Toast.makeText(MainActivity.this, "" + message, Toast.LENGTH_SHORT).show();
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<Value> call, Throwable t) {
+//                //progress.dismiss();
+//                Toast.makeText(MainActivity.this, "Jaringan error"+t, Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//        call2.enqueue(new Callback<Value>() {
+//            @Override
+//            public void onResponse(Call<Value> call2, Response<Value> response) {
+//                //progress.dismiss();
+//                String message = response.body().getMessage();
+//                if (response.body().getValue().equals("1")) {
+//                    Toast.makeText(MainActivity.this, ""+message, Toast.LENGTH_SHORT).show();
+//                   // loadDataCategory();
+//                } else {
+//                    Toast.makeText(MainActivity.this, "" + message, Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<Value> call, Throwable t) {
+//                //progress.dismiss();
+//                Toast.makeText(MainActivity.this, "Jaringan error", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 }

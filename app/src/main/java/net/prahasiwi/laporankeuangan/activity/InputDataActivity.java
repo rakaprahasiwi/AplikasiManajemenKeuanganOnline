@@ -201,7 +201,7 @@ public class InputDataActivity extends AppCompatActivity {
         progress.setMessage("Loading ...");
         progress.show();
         ServiceGenerator serviceGenerator = new ServiceGenerator();
-        RegisterAPI api = serviceGenerator.getClient(urldatabase).create(RegisterAPI.class);
+        final RegisterAPI api = serviceGenerator.getClient(urldatabase).create(RegisterAPI.class);
         Call<ValueCategory> call = api.read_income(email);
         call.enqueue(new Callback<ValueCategory>() {
             @Override
@@ -215,7 +215,7 @@ public class InputDataActivity extends AppCompatActivity {
                     }
 
                 } else {
-                    categories.add("Gaji");
+                    categories.add("-");
                 }
                 ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(InputDataActivity.this, android.R.layout.simple_spinner_item, categories);
                 categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -250,7 +250,7 @@ public class InputDataActivity extends AppCompatActivity {
                     }
 
                 } else {
-                    categories.add("Makanan");
+                    categories.add("-");
                 }
                 ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(InputDataActivity.this, android.R.layout.simple_spinner_item, categories);
                 categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -337,7 +337,11 @@ public class InputDataActivity extends AppCompatActivity {
     private void saveAction() {
         final String value = etSum.getText().toString();
         final String description = etDescribe.getText().toString();
-        if (value.trim().equals("") || Integer.parseInt(value) < 1) {
+        final String category = spCategory.getSelectedItem().toString();
+        if(category.equals("-")){
+            Toast.makeText(this, "Tambah Kategori dahulu di pengaturan", Toast.LENGTH_SHORT).show();
+        }
+        else if (value.trim().equals("") || Integer.parseInt(value) < 1) {
             Toast.makeText(InputDataActivity.this, "Jumlah tidak boleh kosong", Toast.LENGTH_SHORT).show();
 
         } else {
@@ -353,7 +357,6 @@ public class InputDataActivity extends AppCompatActivity {
                     encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
                 }
                 final String type = spTipe.getSelectedItem().toString();
-                final String category = spCategory.getSelectedItem().toString();
                 final String date = changeFormatToDatabase(tvDate.getText().toString());
 
                 progress = new ProgressDialog(InputDataActivity.this);
